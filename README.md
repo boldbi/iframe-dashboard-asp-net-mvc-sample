@@ -4,7 +4,7 @@ This project was created using ASP.NET MVC 4.8.  This application aims to demons
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/bold-bi/embedded-bi-samples/assets/129487075/2daf50a4-df65-44e2-8b28-92b2e952837e)
+![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/dd9a1ca5-7e92-4dec-aa0f-fd4b45b108ec)
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ This project was created using ASP.NET MVC 4.8.  This application aims to demons
 
 To set the following properties in the `EmbedProperties.cs` file, follow these instructions:
 
-![EmbedProperties.cs](https://github.com/bold-bi/embedded-bi-samples/assets/129487075/5856a686-3731-43d1-a869-4c800c3f91f3)
+![EmbedProperties.cs](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/27284c21-401f-43da-8ae7-d51d998e55ec)
 
 <meta charset="utf-8"/>
     <table>
@@ -45,15 +45,15 @@ To set the following properties in the `EmbedProperties.cs` file, follow these i
 
  ## Developer IDE
 
-  * Visual Studio 2022(https://visualstudio.microsoft.com/downloads/)
+  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 
  ### Run a Sample Using Visual Studio 2022
  
-  * Open the solution file `IframeEmbedding.sln` in `Visual Studio`.
+  * Open the solution file `IframeEmbedding.sln` in **Visual Studio**.
 
   * Run your `ASP.NET MVC` sample in Visual Studio.
 
-    ![Dashboard View](https://github.com/bold-bi/embedded-bi-samples/assets/129487075/2daf50a4-df65-44e2-8b28-92b2e952837e)
+    ![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/dd9a1ca5-7e92-4dec-aa0f-fd4b45b108ec)
 
 > **NOTE:** If you are facing an error related to `bin\roslyn\csc.ex`, it indicates that performing a `clean build` and `rebuild` is necessary.
 
