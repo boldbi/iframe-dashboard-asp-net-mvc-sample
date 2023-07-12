@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="~/Content/Site.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
-        var embedCode = '@embedSignature';
+        var embedSignature = '@embedSignature';
         var dashboardUrl = '@EmbedProperties.DashboardUrl';
         $(document).ready(function () {
-            var iframeUrl = "<iframe src='" + dashboardUrl + "?" + embedCode + "' id='dashboard-frame' width='100%' height='100%' allowfullscreen frameborder='0'></iframe>";
+            var iframeUrl = "<iframe src='" + dashboardUrl + "?" + embedSignature + "' id='dashboard-frame' width='100%' height='100%' allowfullscreen frameborder='0'></iframe>";
             $("#dashboard").append(iframeUrl);
         });
     </script>

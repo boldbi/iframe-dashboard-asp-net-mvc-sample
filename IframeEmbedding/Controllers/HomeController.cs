@@ -10,32 +10,37 @@ namespace IframeEmbedding.Controllers
     {
         public ActionResult Index()
         {
-            var nonce = Guid.NewGuid().ToString(); // random string
-            var userInfo = EmbedProperties.UserEmail; // email address of the user
-            bool canSaveView = true; // enable or disable permission to create, open, update, delete view 
-            bool hasViews = true; // enable or disable the permission to check the views of the dashboard
-            bool hasExport = true; // enable or disable the permission to export the dashboards and widgets
-            bool hasDashboardComments = true; // enable or disable the permission to comment related actions to dashboards
-            bool hasWidgetComments = true; // enable or disable the permission to comment related actions to widgets
-            bool isMarkFavorite = true; // enable to disable the permission to make the dashboard favorite
+            // Mandatory Parameters to embed the dashboard with token based authentication.
+            var nonce = Guid.NewGuid().ToString(); // To generate random GUID string
+            var userEmail = EmbedProperties.UserEmail; // User email id
             double timeStamp = DateTimeToUnixTimeStamp(DateTime.UtcNow); // current time as UNIX time stamp
-            var expirationTime = "100"; // alive time of the token
+            //double timeStamp = Math.Round((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds); // Current time as UNIX time stamp
 
-            string embedMessage = "embed_nonce=" + nonce + "&embed_user_email=" + userInfo + "&embed_dashboard_views_edit=" + canSaveView + "&hide_header=" + false + "&embed_dashboard_views=" + hasViews + "&embed_dashboard_export=" + hasExport + "&embed_dashboard_comments=" + hasDashboardComments + "&embed_widget_comments=" + hasWidgetComments + "&embed_dashboard_favorite=" + isMarkFavorite + "&embed_timestamp=" + timeStamp + "&embed_expirationtime=" + expirationTime;
+            // Optional dashboard embed parameter
+            bool canSaveView = true; // To show or hide the Save and SaveAs icon in the filter overview. 
+            bool hasViews = true; // To show or hide the views icon from the toolbar.
+            bool hasExport = true; // To show or hide the export icon from the toolbar.
+            bool hasDashboardComments = true; // To show or hide the dashboard comments icon from the toolbar.
+            bool hasWidgetComments = true; // To show or hide the widget comments icon from the toolbar.
+            bool isMarkFavorite = true; // To show or hide the dashboard favorite icon from the toolbar.
+            var expirationTime = "518400"; // Alive time of the token(Expiration time is 518400s)
 
-            string signature = SignURL(embedMessage, EmbedProperties.EmbedSecret);
-            string embedSignature = embedMessage + "&embed_signature=" + signature;
+            // Variable declaration to form the signature for the embed URL 
+            string embedParameters = "embed_nonce=" + nonce + "&embed_user_email=" + userEmail + "&embed_dashboard_views_edit=" + canSaveView + "&hide_header=" + false + "&embed_dashboard_views=" + hasViews + "&embed_dashboard_export=" + hasExport + "&embed_dashboard_comments=" + hasDashboardComments + "&embed_widget_comments=" + hasWidgetComments + "&embed_dashboard_favorite=" + isMarkFavorite + "&embed_timestamp=" + timeStamp + "&embed_expirationtime=" + expirationTime;
 
+            string signature = SignURL(embedParameters, EmbedProperties.EmbedSecret);
+            string embedSignature = embedParameters + "&embed_signature=" + signature;
             ViewBag.EmbedSignature = embedSignature;
 
             return View();
         }
 
-        static string SignURL(string embedMessage, string secretcode)
+        // This method generates the hashed signature using the HMACSHA256 algorithm, which should be appended to the embedParameters with a query parameter named ‘embed_signature’.
+        static string SignURL(string embedParameters, string embedSecretKey)
         {
             var encoding = new UTF8Encoding();
-            var keyBytes = encoding.GetBytes(secretcode);
-            var messageBytes = encoding.GetBytes(embedMessage);
+            var keyBytes = encoding.GetBytes(embedSecretKey);
+            var messageBytes = encoding.GetBytes(embedParameters);
             using (var hmacsha1 = new HMACSHA256(keyBytes))
             {
                 var hashMessage = hmacsha1.ComputeHash(messageBytes);
