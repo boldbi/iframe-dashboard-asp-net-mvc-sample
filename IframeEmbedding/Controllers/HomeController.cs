@@ -13,8 +13,7 @@ namespace IframeEmbedding.Controllers
             // Mandatory Parameters to embed the dashboard with token based authentication.
             var nonce = Guid.NewGuid().ToString(); // To generate random GUID string
             var userEmail = EmbedProperties.UserEmail; // User email id
-            double timeStamp = DateTimeToUnixTimeStamp(DateTime.UtcNow); // current time as UNIX time stamp
-            //double timeStamp = Math.Round((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds); // Current time as UNIX time stamp
+            double timeStamp = Math.Round((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds); // Current time as UNIX time stamp
 
             // Optional dashboard embed parameter
             bool canSaveView = true; // To show or hide the Save and SaveAs icon in the filter overview. 
@@ -46,13 +45,6 @@ namespace IframeEmbedding.Controllers
                 var hashMessage = hmacsha1.ComputeHash(messageBytes);
                 return Convert.ToBase64String(hashMessage);
             }
-        }
-
-        static double DateTimeToUnixTimeStamp(DateTime dateTime)
-        {
-            DateTime unixStart = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-            long unixTimeStampInTicks = (dateTime.ToUniversalTime() - unixStart).Ticks;
-            return unixTimeStampInTicks / TimeSpan.TicksPerSecond;
         }
     }
 }
