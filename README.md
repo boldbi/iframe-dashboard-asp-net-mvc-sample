@@ -4,7 +4,7 @@ This project was created using ASP.NET MVC 4.8.  This application aims to demons
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/b203b1f9-a235-4d19-b5ed-2f6b15499348)
+![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/df676da3-280d-4006-9914-8d140d279e6c)
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ To set the following properties in the `EmbedProperties.cs` file, follow these i
 
   * Run your `ASP.NET MVC` sample in Visual Studio.
 
-    ![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/b203b1f9-a235-4d19-b5ed-2f6b15499348)
+    ![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/df676da3-280d-4006-9914-8d140d279e6c)
 
 > **NOTE:** If you are facing an error related to `bin\roslyn\csc.ex`, it indicates that performing a `clean build` and `rebuild` is necessary.
 
