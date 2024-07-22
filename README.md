@@ -21,8 +21,8 @@ To set the following properties in the `EmbedProperties.cs` file, follow these i
 
 ![EmbedProperties.cs](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/27284c21-401f-43da-8ae7-d51d998e55ec)
 
-    | Parameter      | Description |
-    |----------------|-------------|
+    | **Parameter**      | **Description** |
+    |--------------------|-----------------|
     | **UserEmail**  | UserEmail of the Admin in your Bold BI, which will be used to get the dashboard. |
     | **EmbedSecret**| Get your EmbedSecret key from the embed tab by enabling `Enable embed authentication` in the [Administration page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). |
     | **DashboardUrl**| Get the [dashboard URL](https://help.boldbi.com/working-with-dashboards/share-dashboards/get-dashboard-link/#get-link) of the dashboard in your Bold BI. |
