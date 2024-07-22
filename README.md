@@ -1,6 +1,6 @@
 # Dashboard Iframe Embedding with ASP.NET MVC
 
-This project was created using ASP.NET MVC 4.8.  This application aims to demonstrate how to embed the Bold BI dashboard by providing the dashboard URL.
+This project was created using ASP.NET MVC 4.8. This application aims to demonstrate how to embed the Bold BI dashboard by providing the dashboard URL.
 
 ## Dashboard view
 
@@ -8,46 +8,34 @@ This project was created using ASP.NET MVC 4.8.  This application aims to demons
 
 ## Prerequisites
 
- * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
- * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+* [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 
- #### Supported browsers
+### Supported browsers
   
-  * Google Chrome, Microsoft Edge, Mozilla Firefox.
+* Google Chrome, Microsoft Edge, Mozilla Firefox.
 
- ## Configuration
+## Configuration
 
 To set the following properties in the `EmbedProperties.cs` file, follow these instructions:
 
 ![EmbedProperties.cs](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/27284c21-401f-43da-8ae7-d51d998e55ec)
 
-<meta charset="utf-8"/>
-    <table>
-    <tbody>
-        <tr>
-            <td align="left">UserEmail</td>
-            <td align="left">UserEmail of the Admin in your Bold BI, which will be used to get the dashboard.</td>
-        </tr>
-        <tr>
-        <td align="left">EmbedSecret</td>
-            <td align="left">Get your EmbedSecret key from embed tab by enabling <code>Enable embed authentication</code> in the <a href='https://help.boldbi.com/embedded-bi/site-administration/embed-settings/'>Administration page</a>. </td>
-        </tr>  
-        <tr>
-        <td align="left">DashboardUrl</td>
-            <td align=left">Get the <a href='https://help.boldbi.com/working-with-dashboards/share-dashboards/get-dashboard-link/#get-link'>dashboard URL</a> of the dashboard in your Bold BI.</td>
-        </tr> 
-    </tbody>
-    </table>   
+    | Parameter      | Description |
+    |----------------|-------------|
+    | **UserEmail**  | UserEmail of the Admin in your Bold BI, which will be used to get the dashboard. |
+    | **EmbedSecret**| Get your EmbedSecret key from the embed tab by enabling `Enable embed authentication` in the [Administration page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). |
+    | **DashboardUrl**| Get the [dashboard URL](https://help.boldbi.com/working-with-dashboards/share-dashboards/get-dashboard-link/#get-link) of the dashboard in your Bold BI. |
 
- ## Developer IDE
+## Developer IDE
 
-  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 
- ### Run a Sample Using Visual Studio 2022
- 
-  * Open the solution file `IframeEmbedding.sln` in **Visual Studio**.
+### Run a Sample Using Visual Studio 2022
 
-  * Run your `ASP.NET MVC` sample in Visual Studio.
+* Open the solution file `IframeEmbedding.sln` in **Visual Studio**.
+
+* Run your `ASP.NET MVC` sample in Visual Studio.
 
     ![Dashboard View](https://github.com/boldbi/iframe-dashboard-asp-net-mvc-sample/assets/129487075/df676da3-280d-4006-9914-8d140d279e6c)
 
