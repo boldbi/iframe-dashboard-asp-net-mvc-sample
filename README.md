@@ -24,8 +24,8 @@ To set the following properties in the `EmbedProperties.cs` file, follow these i
 | **Parameter**     | **Description**                                                                                                    |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
 | **UserEmail**     | UserEmail of the Admin in your Bold BI, which will be used to get the dashboard.                                                                                   |
-| **EmbedSecret**   | Get your EmbedSecret key from the embed tab by enabling `Enable embed authentication` in the [Administration page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). |
-| **DashboardUrl**  | Get the [dashboard URL](https://help.boldbi.com/working-with-dashboards/share-dashboards/get-dashboard-link/#get-link) of the dashboard in your Bold BI.           |
+| **EmbedSecret**   | Get your EmbedSecret key from the embed tab by enabling `Enable embed authentication` in the [Administration page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/?utm_source=github&utm_medium=backlinks). |
+| **DashboardUrl**  | Get the [dashboard URL](https://help.boldbi.com/working-with-dashboards/share-dashboards/get-dashboard-link/#get-link?utm_source=github&utm_medium=backlinks) of the dashboard in your Bold BI.           |
 
 ## Developer IDE
 
@@ -41,7 +41,7 @@ To set the following properties in the `EmbedProperties.cs` file, follow these i
 
 > **NOTE:** If you are facing an error related to `bin\roslyn\csc.ex`, it indicates that performing a `clean build` and `rebuild` is necessary.
 
-Please refer to the [help documentation](https://help.boldbi.com/embedding-options/iframe-embedding/sample/dashboard-embedding/asp.net-mvc/#how-to-run-the-sample) to know how to run the sample.
+Please refer to the [help documentation](https://help.boldbi.com/embedding-options/iframe-embedding/sample/dashboard-embedding/asp.net-mvc/#how-to-run-the-sample?utm_source=github&utm_medium=backlinks) to know how to run the sample.
 
 ## Important notes
 
@@ -49,8 +49,8 @@ It is recommended not to store passwords and sensitive information in configurat
 
 ## Online demos
 
-Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.com/embed).
+Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.com/embed?utm_source=github&utm_medium=backlinks).
 
 ## Documentation
 
-A complete Bold BI Embedding documentation can be found on [Bold BI Embedding Help](https://help.boldbi.com/embedding-options/iframe-embedding/).
+A complete Bold BI Embedding documentation can be found on [Bold BI Embedding Help](https://help.boldbi.com/embedding-options/iframe-embedding/?utm_source=github&utm_medium=backlinks).
